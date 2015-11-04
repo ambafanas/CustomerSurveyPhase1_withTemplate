@@ -83,6 +83,10 @@
 				templateUrl : 'contact_us.html'
 				
 			})
+			.when('/forgotPassword', {
+				templateUrl : 'forgotPassword.html'
+				
+			})
 			
 	});
 
