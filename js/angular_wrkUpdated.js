@@ -205,10 +205,10 @@ myApp.controller('CustomerSurvey',['$http','$timeout','$scope','$location','surv
 						
 						// Encode the String
 						var encodedString = Base64.encode(user.password);
-						alert(encodedString);
+						//alert(encodedString);
 						// Decode the String
 						var decodedString = Base64.decode(encodedString);
-						alert(decodedString);
+						//alert(decodedString);
 						var url=surveyService.getRestAPIURL() + 'GetLoginDetails/' + user.email +'/'+encodedString +'/' + user.Organization
 				 var req={
 				 	method: 'GET',
