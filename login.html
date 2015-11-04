@@ -1,0 +1,83 @@
+<style>
+   input.ng-invalid{border: 1px solid red;}
+   </style>
+
+<div class="container-full" ng-controller="CustomerSurvey">
+        <div class="row">
+       <div class="col-lg-12 text-center v-center">
+          <h2>Login your Account</h2>
+          </div>
+         <!--  <center> <h4 class="lead">Please Provide Your Info</h4></center> -->
+       </div> <!-- /row -->
+
+  <br>
+  <br>
+  	<div class="container" >
+
+    <form name= "demoForm" >
+                 <div class="col-sm-8 " >
+                   
+                       	<img src="images/login.png"  width="400" height="350">
+                        
+                      
+                      </div>
+
+
+                <div class="col-sm-4 col-9 modal-body" >  
+                 
+                       <div class="form-group">
+                          <label for="Email">Q.&nbsp;Your Email Address&nbsp;</label>&nbsp;&nbsp;
+                          <span ng-show="demoForm.email.$error.required">Required!</span>
+                          <span ng-show="demoForm.email.$dirty && demoForm.email.$error.email"> not an email!</span>
+                          <input type="email" class="form-control input-lg" id="Email"  name="email" placeholder="Email Address" ng-model="CustomerSurvey.email" required>
+
+                        </div>
+
+                        <div class="form-group">
+                         
+                          <label for="name">Q.&nbsp;Your Password&nbsp;</label>&nbsp;&nbsp;
+                               <span ng-show="demoForm.password.$dirty && demoForm.password.$error.required"> Required!</span>
+                              <span ng-show="demoForm.password.$dirty && demoForm.password.$error.minlength"> too Short!</span>
+                              <span ng-show="demoForm.password.$dirty && demoForm.password.$error.maxlength"> too Long!</span>
+                          <input type="password" class="form-control input-lg" id="password" name="password" placeholder="password" ng-model="CustomerSurvey.password" required ng-minlength="3" ng-maxlength="13"/>
+                           
+                        </div>
+
+                      <div class="form-group">
+                         <label for="organization">Q.&nbsp;Your Organization&nbsp;</label>
+                          <select class="form-control input-lg" name="Organization" ng-model="CustomerSurvey.Organization">
+                                <option  ng-repeat="org in Organizations">{{org}}</option>
+                                <!-- <option>Organization2</option> -->
+                          </select>
+
+                      </div>
+
+                        </br>
+                        <div class="form-group">
+                    	  <button type="button" class="btn btn-primary btn-lg btn-block"ng-disabled="demoForm.$invalid" ng-click="SubmitLoginDetails(CustomerSurvey)">Submit</button> 
+                        </div>
+                      </div>
+                      
+
+                      </form>
+
+ <!--login modal-->
+
+
+    
+
+
+
+         </div>
+    
+  </div> <!-- /container full -->
+
+                 
+<!-- <footer class="footer-attr">  
+<ul class="nav nav-tabs pull-right" style="margin-right: 100px; bottom: 100px">
+     <li><a href="#about_us"><b>About Us</b></a></li>
+     <li><a href="#contact_us"><b>Contact Us</b></a></li>
+    <li></li>
+  </ul>
+    </footer> -->
+   

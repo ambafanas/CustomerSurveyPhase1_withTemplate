@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp"  >
+  <head>
+    <title>Tech</title>
+    <meta charset="utf-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+ 
+  </head>
+  <body>
+   <main>
+
+     <div ng-include='"templates/header.html"'></div>
+        <div class="view" ng-view>
+          
+
+        </div>
+     <div ng-include='"templates/footer.html"'></div>
+        
+    </main>
+
+
+  </body>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/angular_wrkUpdated.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/click.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  
+</html>

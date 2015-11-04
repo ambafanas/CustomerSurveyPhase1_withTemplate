@@ -1,0 +1,95 @@
+
+   <div class="container-full" ng-controller="FirmDetails">
+
+       <div class="row">
+                  <div class="col-lg-12 text-center v-center">
+                           <h2>Survey Rating</h2>
+                         <!--  <h3 class="lead">For your kind support.</h3> -->
+                           <button value="submit" ng-click="showData()"/>
+                       
+                    </div>
+         </div>  
+          
+  <div class="container" >
+         
+   <table class="table ">
+      <thead>
+        <tr>
+          <th>Firm Name</th>
+          <th>State/Province</th>
+          <th>Country </th>
+          <th>Practice Type</th>
+          <th>Name of Evaluator</th>
+        </tr>
+        </thead>
+      <tr ng-repeat="firm in firms">
+         <td><a ng-href="/surveyForm/{{firm.FirmFirmID}}/{{firm.FirmEvaluatorID}}" >{{firm.FirmName}}</a></td>
+          <td>{{firm.FirmState}}</td>
+          <td>{{firm.FirmCountry}} </td>
+          <td>{{firm.FirmPracticeType}}</td>
+          <td>{{firm.FirmEvaluator}}</td>
+          <td><button  ng-click="getSurveyDone(firm.FirmFirmID,firm.FirmEvaluatorID}})"> Get Survey Done</button></td>
+      </tr></table>
+
+
+       </div>       
+    
+  </div> <!-- /container full -->
+            
+      
+ <!--  <table class="table ">
+    <thead>
+      <tr>
+        <th>Firm Name</th>
+        <th>State/Province</th>
+        <th>Country </th>
+        <th>Practice Type</th>
+        <th>Name of Evaluator</th>
+      </tr>
+    <tr>
+        <td>US FIRMS</td>
+      </tr>
+          </thead>
+        <tbody> 
+      <tr>
+        <td>Roetzel & Andress</td>
+        <td>OH</td>
+        <td>-----------</td>
+        <td>Commercial</td>
+        <td>Aaron Granger</td>
+      </tr>
+      <tr>
+        <td>Scopelitis Garvin Light & Hanson</td>
+        <td>Various</td>
+        <td>-----------</td>
+        <td>Regulatory / Transportation</td>
+        <td>Aaron Granger</td>
+      </tr>
+       <tr>
+        <td>Ice Miller</td>
+        <td>OH</td>
+        <td>-----------</td>
+        <td>Employment</td>
+        <td>Aaron Granger</td>
+      </tr>
+       <tr>
+        <td>Ice Miller</td>
+        <td>OH</td>
+        <td>-----------</td>
+        <td>Real Estate</td>
+        <td>Elaine Darr</td>
+      </tr>
+       <tr>
+         <tr>
+        <td>Ice Miller</td>
+        <td>OH</td>
+        <td>-----------</td>
+        <td>Economic Incentives</td>
+        <td>Elaine Darr</td>
+       
+      </tr>
+      </tr>
+    </tbody>
+  </table> -->
+
+
